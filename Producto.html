@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Productos - Ferretería Los Maestros</title>
+
+    <link rel="stylesheet" href="CSS/Producto.css">
+</head>
+
+<body>
+    <!-- Encabezado principal de la página: contiene la barra de navegación y los accesos rápidos -->
+    <nav class="navbar-ferreteria">
+        <div class="logo">
+            <a href="index.html">
+                <img src="assets/img/montain.jfif" alt="Icono de montaña" class="logo-icon">
+                <span class="logo-text">Ferreteria Los Maestros</span>
+            </a>
+        </div>
+
+        <!-- Menu de enlases con las otras paginas  -->
+        <ul class="menu-enlaces">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="Producto.html">Productos</a></li>
+            <li><a href="nosotros.html">Nosotros</a></li>
+            <li><a href="#">Blogs</a></li>
+            <li><a href="contacto.html">Contactanos</a></li>
+        </ul>
+
+        <div class="user-actions">
+            <div class="user-dropdown">
+                <a href="#" class="user-trigger">👤 Bienvenido</a>
+                <div class="dropdown-content">
+                    <a href="#">Registrarse</a>
+                    <a href="#">Iniciar sesión</a>
+                </div>
+            </div>
+
+            <a href="Carrito.html" class="cart-link">
+                <span class="cart-badge" id="cartBadge">0</span>
+                🛒 Carrito
+            </a>
+        </div>
+    </nav>
+
+    <!-- Texto introductorio de la sección de productos -->
+    <div class="filtros-titulo">Busca, filtra y agrega productos al carrito.</div>
+
+    <!-- Panel de filtros: permite buscar productos por texto, categoría, disponibilidad y precio máximo -->
+    <div class="filtros-panel">
+        <div class="filtro-col">
+            <label for="searchInput">Buscar</label>
+            <div class="search-container">
+                <form id="searchForm" class="search-form">
+                    <input type="text" id="searchInput" class="search-input" placeholder="Ej. clado">
+                    <button type="submit" class="search-button">Buscar</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="filtro-col">
+            <label for="categoriaFilter">Categoría</label>
+            <select id="categoriaFilter" class="filtro-select">
+                <option value="todas">Todas las categorías</option>
+            </select>
+        </div>
+
+        <div class="filtro-col">
+            <label for="disponibilidadFilter">Disponibilidad</label>
+            <select id="disponibilidadFilter" class="filtro-select">
+                <option value="todos">Todos</option>
+                <option value="disponibles">Disponibles</option>
+                <option value="agotados">Agotados</option>
+            </select>
+        </div>
+
+        <div class="filtro-col">
+            <label for="precioMaxFilter">Precio máximo</label>
+            <select id="precioMaxFilter" class="filtro-select">
+                <option value="">Sin límite</option>
+                <option value="5000">$5.000</option>
+                <option value="10000">$10.000</option>
+                <option value="20000">$20.000</option>
+                <option value="50000">$50.000</option>
+                <option value="100000">$100.000</option>
+                <option value="200000">$200.000</option>
+            </select>
+        </div>
+
+        <div class="filtro-col accion-col">
+            <label>&nbsp;</label>
+            <button type="button" id="limpiarFiltros" class="clear-button">Limpiar</button>
+        </div>
+    </div>
+
+    <!-- Contenedor principal donde se muestran los productos en forma de cuadrícula -->
+    <main class="main-container">
+        <div class="productos-grid" id="contenedorProductos"></div>
+    </main>
+
+    <!-- Carga el archivo JavaScript que genera y controla la lista de productos -->
+    <script src="js/productos.js"></script>
+
+    
+</body>
+</html>

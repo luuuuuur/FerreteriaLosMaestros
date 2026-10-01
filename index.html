@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ferreteria Los Maestros</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Encabezado y barra de navegación principal de la página de inicio -->
+    <div>
+        <nav class="navbar-ferreteria">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="assets/img/montain.jfif" alt="Icono de montañas" class="logo-icon">
+                    <span class="logo-text"> Ferreteria Los Maestros</span>
+                </a>
+            </div>
+            <!--Lista de enlaces-->
+            <ul class="menu-enlaces">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="Producto.html">Productos</a></li>
+                <li><a href="nosotros.html">Nosotros</a></li>
+                <li><a href="#">Blogs</a></li>
+                <li><a href="contacto.html">Contactanos</a></li>
+            </ul>
+            <!--  Contenedor de acciones lado derecho  -->
+            <div class="user-actions">
+
+                <!-- menu desplegable bienvenido-->
+                <div class="user-dropdown">
+                    <a href="#" class="user-trigger">
+                        👤 Bienvenido
+                    </a>
+                    <!-- La caja blanca que estará oculta -->
+                    <div class="dropdown-content">
+                        <a href="#">Registrarse</a>
+                        <a href="#">Iniciar sesión</a>
+                    </div>
+                </div>
+
+                <!-- 2. El botón del Carrito de Compras -->
+                <a href="Carrito.html" class="cart-link">
+                    <span class="cart-badge">0</span>
+                    🛒 Carrito
+                </a>
+
+            </div>
+        </nav>
+        <!-- Barra de búsqueda para localizar productos dentro del sitio -->
+        <div class="search-container">
+            <form action="/buscar" method="get">
+                <input type="text" name="q" class="search-input" placeholder="Buscar...">
+                <button type="submit" class="search-button">Buscar producto</button>
+            </form>
+        </div>
+        <!-- Banner promocional destacado en la parte superior de la página -->
+        <div class="banner-container">
+            <img src="assets/img/baner.jfif" alt="Ofertas imperdibles para el maestro en casa" class="banner-image">
+        </div>
+    </div>
+    <!-- Título de la sección de productos destacados -->
+    <div class="frase-productos-destacados">
+        <h3> PRODUCTOS DESTACADOS </h3>
+    </div>
+    <!-- Vitrina principal de productos con tarjetas de presentación -->
+    <div class="vitrina-productos">
+        <div class="card">
+            <img src="assets/Productos/Caladora500W.jpg" alt="imagen de caladora">
+            <div class="card-content">
+                <h3>Caladora 500W Skil</h3>
+                <pCaladora> $42.990</pCaladora>
+                </p>
+                <a href="#" class="btn">Añadir al carrito</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="assets/Productos/serrucho.webp" alt="imagen serrucho">
+            <div class="card-content">
+                <h3>Serrucho 20" 7 dientes por pulgada Stanley</h3>
+                <pCaladora> $9.490</pCaladora>
+                </p>
+                <a href="#" class="btn">Añadir al carrito</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="assets/Productos/Alicateuniversal.jpg" alt="imagen Alicate Universal">
+            <div class="card-content">
+                <h3>Alicate Universal 8" Stanley</h3>
+                <pCaladora> $7.290</pCaladora>
+                </p>
+                <a href="#" class="btn">Añadir al carrito</a>
+            </div>
+        </div>
+
+
+        <div class="card">
+            <img src="assets/Productos/Esmaltesintético.jpg" alt="imagen Esmalte sintético">
+            <div class="card-content">
+                <h3>Esmalte sintético 1/4 litro (varios col.) Sipa</h3>
+                <pCaladora> $4.290</pCaladora>
+                </p>
+                <a href="#" class="btn">Añadir al carrito</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="assets/Productos/Pinturalátexinterior.png" alt="imagen Pinturalátexinterior ">
+            <div class="card-content">
+                <h3> Esmalte sintético 1 litro (varios col.) Sipa</h3>
+                <pCaladora> $9.490</pCaladora>
+                </p>
+                <a href="#" class="btn">Añadir al carrito</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="assets/Productos/CementoPolpaicogris.webp" alt="imagen CementoPolpaicogris">
+            <div class="card-content">
+                <h3> Cemento Polpaico gris 25 kg</h3>
+                <pCaladora> $5.990</pCaladora>
+                </p>
+                <a href="#" class="btn">Añadir al carrito</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bloque de imágenes promocionales adicionales -->
+    <div class="propagandas">
+        <img src="assets/Productos/propaganda111.png" alt="propaganda producto">
+        <img src="assets/Productos/propaganda22.png" alt="propaganda frase">
+    </div>
+
+    <!-- Pie de página con información institucional y enlaces de ayuda -->
+    <footer class="footer-ferreteria">
+        
+        <div class="footer-columnas">
+            
+            <div class="columna-info">
+                <img src="assets/img/montain.jfif" alt="Logo Los Maestros">
+                <li><a href="#">Av. Americo Vespucio 1252, Pudahuel</a></li>
+              
+            </div>
+
+            <div class="columna-enlaces">
+                <h3>Nosotros</h3>
+                <ul>
+                    <li><a href="nosotros.html">Quiénes Somos</a></li>
+                    <li><a href="#">Tiendas</a></li>
+                </ul>
+            </div>
+
+            <div class="columna-enlaces">
+                <h3>Ayuda</h3>
+                <ul>
+                    <li><a href="#">Condiciones de despacho</a></li>
+                    <button class="btn-contacto">Contáctanos</button>
+                </ul>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

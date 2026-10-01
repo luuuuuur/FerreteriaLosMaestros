@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalle de Producto - Mi Tienda</title>
+    <link rel="stylesheet" href="CSS/styles.css">
+    <link rel="stylesheet" href="CSS/Detalle.css">
+</head>
+<body>
+
+    <!-- Barra de navegación principal de la página de detalle del producto -->
+    <nav>
+        <div class="logo">
+            <a href="index.html">
+                <img src="assets/img/montain.jfif" alt="Icono de montaña" class="logo-icon">
+                <span class="logo-text">Ferreteria Los Maestros</span>
+            </a>
+        </div>
+        <ul class="menu-enlaces">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="Producto.html">Productos</a></li>
+            <li><a href="nosotros.html">Nosotros</a></li>
+            <li><a href="#">Blogs</a></li>
+            <li><a href="contacto.html">Contactanos</a></li>
+        </ul>
+        <div class="user-actions">
+            <a href="Carrito.html" class="cart-link">
+            <span class="cart-badge" id="cartBadge">0</span>
+            🛒 Carrito
+            </a>
+        </div>
+    </nav>
+
+    <!-- Contenedor principal donde se muestra el detalle completo del producto -->
+    <main class="main-container">
+
+        <!-- Ruta de navegación que indica la ubicación del producto dentro del sitio -->
+        <div class="breadcrumb" id="breadcrumb">
+            <a href="index.html">Home</a> &gt; 
+            <a href="#" id="bread-categoria">Categoría</a> &gt; 
+            <span id="bread-nombre">Nombre Producto</span>
+        </div>
+
+        <!-- Sección principal con la galería de imágenes e información del producto -->
+        <section class="producto-detalle-grid">
+            
+            <!-- Bloque izquierdo: imagen principal y miniaturas del producto -->
+            <div class="galeria-seccion">
+                <div class="imagen-principal-box">
+                    <img id="img-principal" src="" alt="Cargando...">
+                </div>
+                <div class="thumbnails-container" id="thumbnails-box">
+                    <!-- Las miniaturas se cargan con JS -->
+                </div>
+            </div>
+
+            <!-- Bloque derecho: información del producto, precio y botón de compra -->
+            <div class="info-seccion">
+                <div class="header-producto">
+                    <h1 id="nombre-producto">Cargando producto...</h1>
+                    <span class="precio-destacado" id="precio-producto">$0</span>
+                </div>
+
+                <hr class="divisor">
+
+                <div class="descripcion-box">
+                    <p id="descripcion-producto">Cargando descripción...</p>
+                </div>
+
+                <hr class="divisor">
+
+                <!-- Selector de cantidad para decidir cuántas unidades se agregan al carrito -->
+                <div class="cantidad-selector">
+                    <label for="select-cantidad">Cantidad:</label>
+                    <select id="select-cantidad">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
+                </div>
+
+                <!-- Botón Añadir al Carrito -->
+                <button class="btn-anadir-carrito" id="btn-anadir">Añadir al carrito</button>
+
+                <hr class="divisor">
+            </div>
+        </section>
+
+        <!-- Sección de productos sugeridos relacionados con el producto actual -->
+        <section class="relacionados-seccion">
+            <h3>Productos sugeridos</h3>
+            <div class="productos-grid-5" id="relacionados-container">
+                <!-- Se cargan dinámicamente mediante JS -->
+            </div>
+        </section>
+
+    </main>
+
+    <!--Enlaces-->
+    <!-- Scripts que cargan los datos y la lógica de compra del producto -->
+    <script src="js/productos.js"></script>
+    <script src="js/DetalleProducto.js"></script>
+</body>
+</html>

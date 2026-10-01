@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Ferreteria | Panel de administracion</title>
+    <link rel="stylesheet" href="./dashboard.css">
+    <script src="../js/events.js"></script>
+</head>
+<body>
+    <div class="app-container">
+        <aside class="options-aside-panel-container">
+            <button class="menu-toggle" type="button" aria-label="Abrir menú" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <nav class="options" aria-label="Business navigation">
+                <div class="header">
+                    <img src="../icons/martillo.jpg" alt="company_icon" class="company-icon">
+                    <h1 class="company-name">Los Maestros</h1>
+                </div>
+                <div class="business-options">
+                        <!--ID es para JS/TS y class para CSS los IDS son para interactuar con JS-->
+                        <!--imagenes de esta parte tienen su clase personalizada-->
+                    <ul>
+
+
+                            <li><button class="bopt" id="editarProductos" type="button"> Editar Productos</button></li>
+                        <li><button class="bopt" id="addProductos" type="button">Añadir Producto</button></li>
+                        <li><button class="bopt" id="listarProductos" type="button">Listar Productos</button></li>
+                            <li><button class="bopt" id="empleados" type="button">Añadir Empleado</button></li>
+                        <li><button class="bopt" id="editarEmpleados" type="button">Editar Empleado</button></li>
+                        <li><button class="bopt" id="listarEmpleados" type="button">Listar Empleados</button></li>
+
+
+                    </ul>
+
+                </div>
+                <!--icons para esta parte que tiene su clase personalizada MISMA lógica con los IDs-->
+                <div class="miscellaneous-options">
+                    <ul>
+                        <li><button class="mopt" id="settings">Settings</button></li>
+                        <li><button class="mopt" id="profile">Profile+</button></li>
+                        <li><button class="mopt" id="search">Search</button></li>
+                        <li><button class="mopt" id="help">Help</button></li>
+                    </ul>
+                </div>
+            </nav>
+        </aside>
+        <!--aki se mostrara el resultado de los botones que eliga el usuario-->
+        <div id="option-selected-container">
+        </div>
+    </div>
+</body>
+</html>

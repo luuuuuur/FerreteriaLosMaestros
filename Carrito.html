@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrito de Compras - Ferretería Los Maestros</title>
+    <link rel="stylesheet" href="CSS/Carrito.css">
+</head>
+<body>
+
+    <!-- Barra de navegación principal del sitio -->
+    <nav>
+        <div class="logo">
+            <a href="index.html">
+                <img src="assets/img/montain.jfif" alt="Icono de montaña" class="logo-icon">
+                <span class="logo-text">Ferretería Los Maestros</span>
+            </a>
+        </div>
+        <ul class="menu-enlaces">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="Producto.html">Productos</a></li>
+            <li><a href="nosotros.html">Nosotros</a></li>
+            <li><a href="#">Blogs</a></li>
+            <li><a href="contacto.html">Contáctanos</a></li>
+        </ul>
+        <div class="user-actions">
+            <a href="Carrito.html" class="cart-link">
+                🛒 Cart (<span id="cart-count">0</span>)
+            </a>
+        </div>
+    </nav>
+
+    <!-- Contenedor principal de la página del carrito -->
+    <main class="main-container">
+
+        <!-- Ruta de navegación que indica que el usuario está en el carrito -->
+        <div class="breadcrumb">
+            <a href="index.html">Home</a> &gt; <span>Carrito de Compras</span>
+        </div>
+
+        <h1 class="titulo-pagina">Tu Carrito de Compras</h1>
+
+        <!-- Estructura de dos columnas: productos en la izquierda y resumen en la derecha -->
+        <div class="carrito-grid">
+
+            <!-- Columna izquierda: lista dinámica de productos agregados -->
+            <section class="carrito-items-seccion" id="contenedor-items">
+                <!-- Se llena dinámicamente con JavaScript -->
+            </section>
+
+            <!-- Columna derecha: resumen del pedido y acciones de pago -->
+            <aside class="resumen-seccion">
+                <div class="resumen-card">
+                    <h2>Resumen del Pedido</h2>
+                    <hr class="divisor">
+                    
+                    <div class="fila-resumen">
+                        <span>Subtotal</span>
+                        <span id="subtotal-precio">$0</span>
+                    </div>
+                    <div class="fila-resumen">
+                        <span>Envío estimado</span>
+                        <span>$3.990</span>
+                    </div>
+
+                    <hr class="divisor">
+
+                    <div class="fila-resumen total">
+                        <span>Total</span>
+                        <span id="total-precio">$0</span>
+                    </div>
+
+                    <button class="btn-checkout" id="btn-pagar" onclick="procesarPago()">Proceder al Pago</button>
+                    <button class="btn-vaciar" onclick="vaciarCarrito()">Vaciar Carrito</button>
+                </div>
+            </aside>
+
+        </div>
+
+    </main>
+
+    <!-- Scripts que cargan los datos del catálogo y la lógica del carrito -->
+    <script src="js/productos.js"></script>
+    <script src="js/Carrito.js"></script>
+</body>
+</html>

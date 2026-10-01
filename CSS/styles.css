@@ -1,0 +1,354 @@
+/* Estilos generales y reutilizables para el sitio principal: navegación, buscador, banners, tarjetas y pie de página. */
+body{
+    background-color: #c5caa3;
+    padding-top: 150px;
+}
+
+.menu-enlaces {
+  display: flex;
+  list-style-type: none;
+}
+
+
+.menu-enlaces a {
+  text-decoration: none;
+  padding: 15px 20px;
+}
+
+.navbar-ferreteria a {
+ padding: 15px 20px;
+}
+
+/*LOGO*/
+.logo a {
+  
+  display: flex;
+  align-items: center; /* ¡IMPORTANTE! Alínea verticalmente la imagen y el texto entre sí */
+  gap: 15px; /* Espacio horizontal agradable entre la imagen y la palabra "Los Maestros" */
+  text-decoration: none; /* Sin subrayado */
+  margin-left: 20px; /* Margen desde el borde izquierdo */
+  
+}
+.logo-icon {
+  height: 80px; /* Ajusta este número para que la montaña encaje con el tamaño del texto */
+  width: auto; /* Mantiene la proporción de la imagen */
+}
+
+.logo-text {
+  color: white; /* O tu color preferido rústico */
+  font-size: 26px;
+  font-weight: bold;
+  
+}
+
+/* Estilo general del menú */
+nav {
+ background-color: #272a18;
+ position: fixed;
+ width: 100%;
+ top: 0;
+ z-index: 100000;
+ padding: 25px 0;
+ display: flex;
+ align-items: center; /* Alinea verticalmente logo, enlaces y buscador */
+ justify-content: flex-start; /* Todo empieza a la izquierda */
+}
+/* Estilo de la lista */
+nav ul {
+ list-style: none;
+ margin: 0;
+ padding: 0;
+ display: flex;
+ justify-content: center;
+}
+/* Estilo de los elementos de la lista */
+nav ul li {
+ margin: 0 5px;
+}
+/* Estilo de los enlaces */
+nav ul li a {
+ text-decoration: none;
+ color: white;
+ font-size: 16px;
+ padding: 8px 10px;
+}
+/* Efecto hover */
+nav ul li a:hover {
+ background-color: #5c6138;
+  border-radius: 5px;
+}
+
+/* --- ESTILOS DEL BUSCADOR EXTERNO --- */
+.search-container {
+    display: flex;
+    justify-content: center; /* Centra el buscador en la pantalla */
+    padding: 20px 0; /* Le da espacio arriba y abajo */
+    width: 100%;
+}
+
+.search-input {
+    width: 400px; /* ¡Ahora podemos hacerlo mucho más ancho! */
+    padding: 10px 15px;
+    border: 1px solid #a4a982;
+    border-radius: 4px 0 0 4px; /* Redondea solo las esquinas izquierdas */
+    outline: none;
+    font-size: 15px;
+}
+
+.search-button {
+    padding: 10px 20px;
+    background-color: #5c6138;
+    color: white;
+    border: none;
+    border-radius: 0 4px 4px 0; /* Redondea solo las esquinas derechas */
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.search-button:hover {
+    background-color: #3b3f24;
+}
+/* Asegura que el input y el botón estén pegados uno al lado del otro */
+.search-container form {
+    display: flex;
+}
+
+/* --- 1. CONTENEDOR DERECHO --- */
+.user-actions {
+    display: flex;
+    align-items: center;
+    gap: 20px; /* Separación entre "Bienvenido" y "Carrito" */
+    margin-left: auto; /* ¡LA MAGIA! Esto empuja toda la caja hacia el extremo derecho */
+    margin-right: 20px; /* Para que no quede pegado al borde de la pantalla */
+}
+
+/* --- 2. MENÚ DESPLEGABLE (BIENVENIDO) --- */
+.user-dropdown {
+    position: relative; /* Necesario para que la caja blanca se posicione justo debajo de él */
+    display: inline-block;
+}
+
+.user-trigger {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.user-trigger:hover {
+    color: #b9bf90;
+}
+
+/* La caja blanca oculta */
+.dropdown-content {
+    display: none; /* Esto la mantiene invisible al principio */
+    position: absolute;
+    background-color: white;
+    min-width: 180px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); /* Sombreado elegante */
+    z-index: 1;
+    border-radius: 4px;
+    top: 100%; /* La ubica exactamente debajo de la palabra Bienvenido */
+    right: 0; /* Asegura que el menú se despliegue hacia la izquierda, no fuera de la pantalla */
+}
+
+.dropdown-content a {
+    color: #333;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    font-size: 14px;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+    color: #5c6138;
+}
+
+/* ¡El truco de magia!: Mostrar la caja blanca al pasar el cursor */
+.user-dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* --- 3. BOTÓN DEL CARRITO --- */
+.cart-link {
+    position: relative; /* Para poder colocar el círculo rojo sobre él */
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.cart-link:hover {
+    color: #b9bf90;
+}
+
+/* El circulito rojo con el número (Notificación) */
+.cart-badge {
+    position: absolute; /* Permite mover el circulito libremente... */
+    top: -8px; /* ...hacia arriba */
+    left: -10px; /* ...y hacia la izquierda del icono del carrito */
+    background-color: #cc0000; /* Color rojo */
+    color: white;
+    border-radius: 50%; /* Lo hace redondo */
+    padding: 2px 6px;
+    font-size: 11px;
+    font-weight: bold;
+}
+
+/* --- ESTILOS DEL BANNER PRINCIPAL --- */
+
+.banner-container {
+    width: 100%; /* El contenedor ocupa todo el ancho de la pantalla */
+    display: flex;
+    justify-content: center; /* Centra la imagen horizontalmente */
+    margin-top: 10px; /* Un pequeño respiro de espacio entre el buscador y el banner */
+    margin-bottom: 40px; /* Espacio antes del siguiente contenido de la página */
+    padding: 0 20px; /* Margen a los lados para que la imagen no pegue a los bordes de la ventana */
+    box-sizing: border-box; /* Asegura que el padding no rompa el ancho total */
+}
+
+.banner-image {
+    width: 100%; /* La imagen intentará llenar su contenedor */
+    max-width: 1200px; /* ¡IMPORTANTE! Límite de ancho para que no se vea gigante en pantallas muy grandes */
+    height: auto; /* Mantiene la proporción original de la imagen (no se achatará ni se estirará) */
+    border-radius: 8px; /* Le da unos bordes ligeramente redondeados y modernos */
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15); /* Una sombra sutil para darle profundidad, como en tu referencia */
+}
+/* --- ESTILOS DE LA TARJETA --- */
+.card {
+    width: 300px; /* Define el ancho exacto de la tarjeta. Puedes agrandarlo a 350px si quieres */
+    background-color: white;
+    border: 1px solid #e6e6e6;
+    border-radius: 8px; /* Redondea las esquinas */
+    overflow: hidden; /* Evita que la imagen se salga de los bordes redondeados */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1); /* Le da una sombra elegante */
+    margin: 20px; /* Le da espacio por fuera para que no se pegue a otras cosas */
+    font-family: Arial, sans-serif;
+}
+
+/* Estilo para la imagen dentro de la tarjeta */
+.card img {
+    width: 100%; /* Obliga a la imagen a ocupar todo el ancho de la tarjeta */
+    height: 200px; /* Le da una altura fija */
+    object-fit: contain; /* Evita que la imagen se estire o deforme */
+    background-color: #fff; /* Fondo blanco por si la imagen es pequeña */
+    border-bottom: 1px solid #eee; /* Línea sutil que separa la foto del texto */
+}
+
+/* Espacio interior para el texto */
+.card-content {
+    padding: 20px; /* Crea un "colchón" interior para que el texto no toque los bordes */
+}
+
+.card-content h3 {
+    margin-top: 0;
+    color: #333;
+    font-size: 18px;
+}
+
+.card-content p {
+    color: #666;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+/* Estilo para el botón "Leer más" */
+.card .btn {
+    display: inline-block; /* Permite darle margen y padding al enlace */
+    background-color: #a4a982; /* Rojo ferretero */
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 4px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.card .btn:hover {
+    background-color: #b71c1c;
+}
+
+.vitrina-productos {
+    display: flex;             /* Coloca las tarjetas en una fila */
+    flex-wrap: wrap;           /* Si no hay espacio en la pantalla, las pasa a la fila de abajo */
+    justify-content: center;   /* Centra las tarjetas horizontalmente */
+    max-width: 1200px;         /* Limita el ancho para que no se estiren demasiado */
+    margin: 0 auto;            /* Centra el contenedor completo en la pantalla */
+}
+
+.frase-productos-destacados{
+    display: flex;
+    color: #333; /* O tu color preferido rústico */
+    font-size: 26px;
+    font-weight: bold;
+    justify-content: center;
+}
+/* --- SECCIÓN DE BANNERS PUBLICITARIOS --- */
+.propagandas {
+    display: flex;
+    justify-content: center; /* Centra los banners horizontalmente */
+    flex-wrap: wrap; /* Permite que bajen si la pantalla es de celular */
+    gap: 30px; /* Espacio ideal entre ambos banners */
+    max-width: 1200px; /* Mantiene el mismo límite de ancho que tu vitrina */
+    margin: 60px auto; /* Lo separa 60px de arriba/abajo y lo centra en la pantalla */
+    padding: 0 20px;
+}
+
+.propagandas img {
+    width: 100%; /* La imagen toma el espacio disponible */
+    max-width: 560px; /* Límite para que quepan 2 perfectas en la pantalla (mitad de 1200px) */
+    height: auto;
+    border-radius: 12px; /* ¡La clave! Bordes bien redondeados como tu referencia */
+    box-shadow: 0 10px 20px rgba(0,0,0,0.25); /* Sombra elegante para dar profundidad */
+    cursor: pointer; /* Cambia el cursor a una manito para indicar que son clickeables */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Prepara un efecto suave */
+}
+
+/* Efecto opcional de lujo: al pasar el mouse por encima de la publicidad */
+.propagandas img:hover {
+    transform: translateY(-5px); /* Eleva la imagen un poquito hacia arriba */
+    box-shadow: 0 15px 25px rgba(0,0,0,0.35); /* Hace la sombra más grande */
+}
+
+.footer-ferreteria {
+    background-color: #272a18; /* Tonos verdes de tu proyecto */
+    color: white;
+    padding: 40px 20px;
+    font-family: Arial, sans-serif;
+}
+
+.columna-info img{
+     height: 80px; /* Ajusta este número para que la montaña encaje con el tamaño del texto */
+     width: auto;
+    
+}
+.columna-info li a{
+    color: white;
+    
+  
+}
+
+.footer-columnas {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto; /* Centra el contenido */
+}
+
+.columna-enlaces ul {
+    list-style: none;
+    padding: 0;
+}
+
+.columna-enlaces a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+}

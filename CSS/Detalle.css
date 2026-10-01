@@ -1,0 +1,117 @@
+/* Estilos de la página de detalle del producto: breadcrumb, galería, información, compra y productos relacionados. */
+/* DETALLE DE PRODUCTO */
+        .breadcrumb { margin-bottom: 20px; font-size: 13px; color: #333; }
+        .breadcrumb a { color: #2459a6; }
+
+        /* Layout principal del detalle del producto: imagen a la izquierda y contenido a la derecha. */
+        .producto-detalle-grid {
+            display: grid;
+            grid-template-columns: 1.4fr 1fr;
+            gap: 35px;
+            background-color: #fff;
+            padding: 25px;
+            border: 1px solid #222;
+        }
+
+        /* Contenedor de la imagen principal y miniaturas del producto. */
+        .imagen-principal-box {
+            height: 360px;
+            border: 1px solid #222;
+            background-color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .imagen-principal-box img { max-width: 100%; max-height: 100%; object-fit: contain; }
+
+        .thumbnails-container {
+            display: flex;
+            gap: 10px;
+            padding: 10px;
+            border: 1px solid #222;
+            border-top: none;
+        }
+
+        .miniatura {
+            width: 65px;
+            height: 65px;
+            padding: 4px;
+            background-color: #fff;
+            border: 2px solid #777;
+            cursor: pointer;
+        }
+
+        .miniatura.activa { border-color: #1f70d1; }
+        .miniatura img { width: 100%; height: 100%; object-fit: contain; }
+
+        /* Encabezado del producto: nombre, precio y descripción. */
+        .header-producto {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 20px;
+        }
+
+        .header-producto h1 { font-size: 25px; font-weight: normal; }
+        .precio-destacado { font-size: 22px; font-weight: bold; white-space: nowrap; }
+        .divisor { margin: 25px 0; border: none; border-top: 1px solid #ccc; }
+        .descripcion-box { line-height: 1.5; font-size: 14px; }
+
+        .cantidad-selector {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+            font-weight: bold;
+        }
+
+        .cantidad-selector select { width: 90px; padding: 7px; }
+
+        .btn-anadir-carrito {
+            width: 100%;
+            padding: 12px;
+            background-color: #2877d7;
+            color: #fff;
+            border: 2px solid #111;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .btn-anadir-carrito:hover:not(:disabled) { background-color: #185bb0; }
+        .btn-anadir-carrito:disabled { opacity: 0.5; cursor: not-allowed; }
+
+        /* Sección de productos relacionados sugeridos al usuario. */
+        .relacionados-seccion {
+            margin-top: 35px;
+            border-top: 1px solid #bbb;
+            padding-top: 25px;
+        }
+
+        .relacionados-seccion h2 { font-size: 16px; margin-bottom: 20px; }
+
+        .productos-grid-5 {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 20px;
+        }
+
+        .producto-relacionado {
+            border: 1px solid #222;
+            background-color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .producto-relacionado img { width: 100%; height: 130px; object-fit: contain; }
+        .producto-relacionado h3 { margin-top: 8px; font-size: 13px; }
+        .producto-relacionado p { margin-top: 8px; font-weight: bold; }
+        .producto-relacionado a { color: #111; text-decoration: none; }
+        .producto-no-encontrado { padding: 40px; text-align: center; font-size: 18px; }
+
+        @media (max-width: 768px) {
+            .producto-detalle-grid { grid-template-columns: 1fr; }
+            .productos-grid-5 { grid-template-columns: repeat(2, 1fr); }
+            .header-producto { flex-direction: column; }
+        }

@@ -1,0 +1,286 @@
+/* Estilos de la página de contacto: formato del formulario, campos, errores y mensajes de éxito. */
+body{
+    background-color: #c5caa3;
+    padding-top: 150px;
+}
+
+.menu-enlaces {
+  display: flex;
+  list-style-type: none;
+}
+
+
+.menu-enlaces a {
+  text-decoration: none;
+  padding: 15px 20px;
+}
+
+.navbar-ferreteria a {
+ padding: 15px 20px;
+}
+
+/*LOGO*/
+.logo a {
+  
+  display: flex;
+  align-items: center; /* Alínea verticalmente la imagen y el texto entre sí */
+  gap: 15px; /* Espacio horizontal agradable entre la imagen y la palabra "Los Maestros" */
+  text-decoration: none; /* Sin subrayado */
+  margin-left: 20px; /* Margen desde el borde izquierdo */
+  
+}
+.logo-icon {
+  height: 80px; /* Ajusta este número para que la montaña encaje con el tamaño del texto */
+  width: auto; /* Mantiene la proporción de la imagen */
+}
+
+.logo-text {
+  color: white; /* O tu color preferido rústico */
+  font-size: 26px;
+  font-weight: bold;
+  
+}
+
+/* Estilo general del menú */
+nav {
+ background-color: #272a18;
+ position: fixed;
+ width: 100%;
+ top: 0;
+ z-index: 100000;
+ padding: 25px 0;
+ display: flex;
+ align-items: center; /* Alinea verticalmente logo, enlaces y buscador */
+ justify-content: flex-start; /* Todo empieza a la izquierda */
+}
+/* Estilo de la lista */
+nav ul {
+ list-style: none;
+ margin: 0;
+ padding: 0;
+ display: flex;
+ justify-content: center;
+}
+/* Estilo de los elementos de la lista */
+nav ul li {
+ margin: 0 5px;
+}
+/* Estilo de los enlaces */
+nav ul li a {
+ text-decoration: none;
+ color: white;
+ font-size: 16px;
+ padding: 8px 10px;
+}
+/* Efecto hover */
+nav ul li a:hover {
+ background-color: #5c6138;
+  border-radius: 5px;
+}
+
+/* --- ESTILOS DEL BUSCADOR EXTERNO --- */
+
+
+/* ---CONTENEDOR DERECHO --- */
+.user-actions {
+    display: flex;
+    align-items: center;
+    gap: 20px; /* Separación entre "Bienvenido" y "Carrito" */
+    margin-left: auto; /* ¡LA MAGIA! Esto empuja toda la caja hacia el extremo derecho */
+    margin-right: 20px; /* Para que no quede pegado al borde de la pantalla */
+}
+
+/* --- 2. MENÚ DESPLEGABLE (BIENVENIDO) --- */
+.user-dropdown {
+    position: relative; /* Necesario para que la caja blanca se posicione justo debajo de él */
+    display: inline-block;
+}
+
+.user-trigger {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.user-trigger:hover {
+    color: #b9bf90;
+}
+
+/* La caja blanca oculta */
+.dropdown-content {
+    display: none; /* Esto la mantiene invisible al principio */
+    position: absolute;
+    background-color: white;
+    min-width: 180px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); /* Sombreado elegante */
+    z-index: 1;
+    border-radius: 4px;
+    top: 100%; /* La ubica exactamente debajo de la palabra Bienvenido */
+    right: 0; /* Asegura que el menú se despliegue hacia la izquierda, no fuera de la pantalla */
+}
+
+.dropdown-content a {
+    color: #333;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    font-size: 14px;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+    color: #5c6138;
+}
+
+/* ¡El truco de magia!: Mostrar la caja blanca al pasar el cursor */
+.user-dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* --- 3. BOTÓN DEL CARRITO --- */
+.cart-link {
+    position: relative; /* Para poder colocar el círculo rojo sobre él */
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.cart-link:hover {
+    color: #b9bf90;
+}
+
+/* El circulito rojo con el número (Notificación) */
+.cart-badge {
+    position: absolute; /* Permite mover el circulito libremente... */
+    top: -8px; /* ...hacia arriba */
+    left: -10px; /* ...y hacia la izquierda del icono del carrito */
+    background-color: #cc0000; /* Color rojo */
+    color: white;
+    border-radius: 50%; /* Lo hace redondo */
+    padding: 2px 6px;
+    font-size: 11px;
+    font-weight: bold;
+
+
+}
+
+/* --- contendor de contacto --- */
+.tarjeta-blanca-formulario {
+    background-color: #ffffff; /* Fuerza el fondo a ser blanco puro */
+    max-width: 700px; /* Ancho del cuadrado */
+    margin: 80px auto; /* El 'auto' lo centra perfectamente en el medio de la pantalla */
+    padding: 50px; /* Espacio de sobra por dentro para que el formulario respire */
+    border-radius: 12px; /* Esquinas redondeadas y modernas */
+    
+    /* Esta sombra es clave: hace que el cuadrado "flote" y se separe del fondo verde */
+    box-shadow: 0px 15px 40px rgba(0, 0, 0, 0.2); 
+}
+
+/* Estilos básicos para los títulos dentro del cuadrado */
+.titulo-contacto {
+    text-align: center;
+    color: #d32f2f; /* Título rojo */
+    font-family: Arial, sans-serif;
+    margin-top: 0;
+}
+
+.subtitulo-contacto {
+    text-align: center;
+    color: #666; /* Gris oscuro */
+    font-family: Arial, sans-serif;
+    margin-bottom: 20px;
+}
+
+.linea-contacto {
+    border: 0;
+    height: 1px;
+    background-color: #eee;
+    margin-bottom: 30px;
+}
+
+/* --- DIVIDIR NOMBRE Y APELLIDO --- */
+.fila-doble {
+    display: flex;       /* Los pone en la misma línea horizontal */
+    gap: 20px;           /* Crea el espacio de separación entre nombre y apellido */
+    margin-bottom: 20px; /* Margen inferior para no pegarse al campo de Email */
+}
+
+.mitad {
+    flex: 1;             /* Obliga a que ambas cajas midan exactamente el 50% */
+}
+
+/* Estilo para que las cajas blancas se vean modernas */
+.input-estilo {
+    width: 100%; /* Ocupa todo el ancho, igual que la suma de Nombre y Apellido */
+    padding: 10px; /* Mantiene la altura original que te gustó */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-top: 5px;
+    box-sizing: border-box; /* Evita que el padding rompa el tamaño */
+
+}
+
+/* Al hacer clic en el campo, el borde se pone verde */
+.input-estilo:focus {
+    border-color: #5c6138;
+    outline: none;
+}
+
+.filas-simples{
+    width: 100%; /* Ocupa todo el ancho, igual que la suma de Nombre y Apellido */
+    padding: 10px; /* Mantiene la altura original que te gustó */
+    border-radius: 5px;
+    margin-top: 5px;
+    box-sizing: border-box; /* Evita que el padding rompa el tamaño */
+
+
+}
+.campo-simple {
+    margin-bottom: 20px; /* Solo separa cada campo hacia abajo ordenadamente */
+}
+
+/* Estilo específico para ajustar el comportamiento del cuadro de texto grande */
+textarea.input-estilo {
+    resize: vertical; /* Permite al usuario estirarlo solo hacia abajo */
+    height: auto;     /* Respeta las filas definidas por el atributo rows */
+}
+
+
+.texto-error {
+    color: #d32f2f; /* Rojo alerta coherente con los títulos */
+    font-size: 12px;
+    font-family: Arial, sans-serif;
+    margin-top: 4px;
+    display: block;
+    min-height: 16px; /* Evita saltos bruscos en la interfaz cuando aparece el texto */
+}
+
+/* Estado de error visual en el input opcional */
+.input-estilo.error {
+    border-color: #d32f2f;
+}
+
+.mensaje-exito {
+    text-align: center;
+    padding: 40px 20px;
+    font-family: Arial, sans-serif;
+}
+
+.mensaje-exito h2 {
+    color: #5c6138;
+    margin-bottom: 15px;
+}
+
+.mensaje-exito p {
+    color: #555;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+

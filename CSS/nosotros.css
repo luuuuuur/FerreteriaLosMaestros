@@ -1,0 +1,146 @@
+/* Estilos de la página "Nosotros": encabezado institucional, secciones, valores y pie de página. */
+body{
+    background-color: #c5caa3;
+    padding-top: 150px;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+.container{
+    max-width:1000px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+/* Estilo del encabezado principal de la sección institucional. */
+/*encabezado quienes somos y su parrafo*/
+header{
+    text-align: center;
+    padding: 60px 20px;
+    background-color: #5c6138;
+    color: white;
+}
+header h1{
+    margin: 0;
+    font-size: 2.5rem;
+}
+
+header p{
+    font-size: 1.2rem;
+    opacity: 0.8;
+    margin-top: 10px;
+}
+
+/*Estilo de las secciones*/
+.section{
+    margin:40px 0;
+}
+
+.section h2{
+    color: #3b3f24;
+    border-bottom: 2px solid #3b3f24;
+    padding-bottom: 8px;
+}
+
+.grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.card{
+    background-color: #3b3f24;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+
+.menu-enlaces {
+    display: flex;
+    list-style-type: none;
+}
+
+.menu-enlaces a {
+    text-decoration: none;
+    padding: 15px 20px;
+}
+
+.navbar-ferreteria a {
+    padding: 15px 20px;
+}
+/*LOGO*/
+.logo a {
+
+    display: flex;
+    align-items: center; /* ¡IMPORTANTE! Alínea verticalmente la imagen y el texto entre sí */
+    gap: 15px; /* Espacio horizontal agradable entre la imagen y la palabra "Los Maestros" */
+    text-decoration: none; /* Sin subrayado */
+    margin-left: 20px; /* Margen desde el borde izquierdo */
+
+}
+.logo-icon {
+    height: 80px; /* Ajusta este número para que la montaña encaje con el tamaño del texto */
+    width: auto; /* Mantiene la proporción de la imagen */
+}
+
+.logo-text {
+    color: white; /* O tu color preferido rústico */
+    font-size: 26px;
+    font-weight: bold;
+}
+
+/* Estilo general del menú */
+nav {
+    background-color: #272a18;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 100000;
+    padding: 25px 0;
+    display: flex;
+    align-items: center; /* Alinea verticalmente logo, enlaces y buscador */
+    justify-content: flex-start; /* Todo empieza a la izquierda */
+}
+/* Estilo de la lista */
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+/* Estilo de los elementos de la lista */
+nav ul li {
+    margin: 0 5px;
+}
+/* Estilo de los enlaces */
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    padding: 8px 10px;
+}
+/* Efecto hover */
+nav ul li a:hover {
+    background-color: #5c6138;
+    border-radius: 5px;
+}
+
+.footer{
+    background-color: #272a18; /* Tonos verdes de tu proyecto */
+    color: white;
+    padding: 40px 20px;
+    font-family: Arial, sans-serif;
+}
+
+.footer-columnas {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto; /* Centra el contenido */
+}

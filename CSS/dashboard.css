@@ -1,0 +1,323 @@
+/* --- ESTILOS GENERALES Y LAYOUT --- */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f4f6f0; /* Fondo general suave con tono verdoso muy claro */
+  color: #333333;
+}
+
+.app-container {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+}
+
+/* --- BARRA LATERAL (ASIDE) --- */
+.options-aside-panel-container {
+  width: 280px;
+  background-color: #ffffff;
+  border-right: 2px solid #d5dbcb;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.05);
+  position: relative;
+}
+
+.menu-toggle {
+  display: none;
+  width: 48px;
+  height: 48px;
+  margin: 12px auto 0;
+  background: #272a18;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 12px;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 5px;
+  box-shadow: 0 4px 10px rgba(39, 42, 24, 0.15);
+}
+
+.menu-toggle span {
+  display: block;
+  width: 100%;
+  height: 3px;
+  background: #ffffff;
+  border-radius: 3px;
+}
+
+.options {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+  overflow-y: auto;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 25px;
+  padding-bottom: 15px;
+  border-bottom: 2px solid #e2e8d7;
+}
+
+.company-icon {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #272a18;
+}
+
+.company-name {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #272a18;
+  margin: 0;
+}
+
+/* --- BOTONES DEL MENÚ --- */
+.business-options, .miscellaneous-options {
+  margin-bottom: 20px;
+}
+
+.options ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.bopt, .mopt {
+  width: 100%;
+  padding: 12px 15px;
+  background-color: #edf2e6; /* Verde sutil para los botones del menú */
+  color: #272a18;
+  border: 1px solid #c9d4b8;
+  border-radius: 8px;
+  text-align: left;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.bopt:hover, .mopt:hover {
+  background-color: #272a18; /* Tonos verdes oscuros institucionales al pasar el cursor */
+  color: #ffffff;
+  border-color: #272a18;
+  transform: translateX(3px);
+}
+
+/* --- CONTENEDOR PRINCIPAL DE DINÁMICA (DERECHA) --- */
+#option-selected-container {
+  flex-grow: 1;
+  padding: 40px;
+  overflow-y: auto;
+  background-color: #f9fbf7;
+}
+
+#option-selected-container h1 {
+  color: #272a18;
+  font-size: 1.8rem;
+  margin-top: 0;
+  margin-bottom: 25px;
+  border-bottom: 3px solid #b3c29c;
+  padding-bottom: 10px;
+  display: inline-block;
+}
+
+/* --- FORMULARIOS --- */
+form, #edit-prod, #edit-emp {
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(39, 42, 24, 0.08);
+  max-width: 500px;
+  border: 1px solid #d5dbcb;
+}
+
+form label, #edit-prod label, #edit-emp label {
+  font-weight: 600;
+  color: #3b4026;
+  display: block;
+  margin-bottom: 6px;
+}
+
+form input, #edit-prod input, #edit-emp input {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #bcd0a4;
+  border-radius: 6px;
+  font-size: 1rem;
+  box-sizing: border-box;
+  background-color: #fcfffa;
+  transition: border-color 0.2s;
+}
+
+form input:focus, #edit-prod input:focus, #edit-emp input:focus {
+  outline: none;
+  border-color: #272a18;
+  box-shadow: 0 0 0 3px rgba(39, 42, 24, 0.1);
+}
+
+/* --- BOTONES DE ACCIÓN (GUARDAR / EDITAR) --- */
+button[type="button"], #updated-prod-button, #update-emp-button, #btn-guardar-empleado, #save-product-button {
+  background-color: #272a18;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s, transform 0.1s;
+  width: 100%;
+  margin-top: 10px;
+}
+
+button[type="button"]:hover, #updated-prod-button:hover, #update-emp-button:hover, #btn-guardar-empleado:hover, #save-product-button:hover {
+  background-color: #3f4428;
+}
+
+button[type="button"]:active {
+  transform: scale(0.98);
+}
+
+/* --- TABLAS (LISTADOS) --- */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(39, 42, 24, 0.06);
+  border: 1px solid #d5dbcb;
+}
+
+th {
+  background-color: #272a18;
+  color: white;
+  padding: 14px 16px;
+  text-align: left;
+  font-weight: 600;
+}
+
+td {
+  padding: 12px 16px;
+  border-bottom: 1px solid #e9ede3;
+  color: #333333;
+}
+
+tr:hover {
+  background-color: #f1f5eb;
+}
+
+/*diseño responsivo para tablets */
+@media (max-width: 1024px) {
+  .app-container {
+    flex-direction: column;
+    height: auto;
+    min-height: 100vh;
+  }
+
+  .options-aside-panel-container {
+    width: 100%;
+    border-right: none;
+    border-bottom: 2px solid #d5dbcb;
+  }
+
+  .options {
+    padding: 18px 16px;
+  }
+
+  #option-selected-container {
+    width: 100%;
+    padding: 28px 20px;
+  }
+}
+/*diseño responsivo para celus */
+@media (max-width: 700px) {
+  .menu-toggle {
+    display: flex;
+  }
+
+  .options {
+    display: none;
+    padding: 12px 14px 18px;
+  }
+
+  .options.open {
+    display: flex;
+  }
+
+  .header {
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .company-name {
+    font-size: 1.1rem;
+  }
+
+  .bopt, .mopt {
+    padding: 11px 12px;
+    font-size: 0.9rem;
+  }
+
+  .options ul {
+    gap: 8px;
+  }
+
+  #option-selected-container {
+    padding: 18px 14px;
+  }
+
+  #option-selected-container h1 {
+    font-size: 1.4rem;
+  }
+
+  form, #edit-prod, #edit-emp {
+    padding: 20px 16px;
+    max-width: 100%;
+  }
+
+  table {
+    display: block;
+    width: 100%;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+}
+
+@media (max-width: 480px) {
+  .options {
+    padding: 10px 12px 14px;
+  }
+
+  .company-icon {
+    width: 38px;
+    height: 38px;
+  }
+
+  .bopt, .mopt {
+    text-align: center;
+    font-size: 0.85rem;
+  }
+
+  button[type="button"], #updated-prod-button, #update-emp-button, #btn-guardar-empleado, #save-product-button {
+    padding: 10px 14px;
+    font-size: 0.9rem;
+  }
+}

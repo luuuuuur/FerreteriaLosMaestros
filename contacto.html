@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto | Los Maestros </title>
+    <link rel="stylesheet" href="css/contacto.css">
+</head>
+<body>
+   <!-- Encabezado y navegación de la página de contacto -->
+   <div>
+      <nav class="navbar-ferreteria">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="assets/img/montain.jfif" alt="Icono de montañas" class="logo-icon">
+                    <span class="logo-text"> Ferreteria Los Maestros</span>
+                </a>
+            </div>
+            <!--Lista de enlaces-->
+            <ul class="menu-enlaces">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="Producto.html">Productos</a></li>
+                <li><a href="nosotros.html">Nosotros</a></li>
+                <li><a href="#">Blogs</a></li>
+                <li><a href="contacto.html">Contactanos</a></li>
+            </ul>
+            <!--  Contenedor de acciones lado derecho  -->
+            <div class="user-actions">
+                <!-- menu desplegable bienvenido-->
+                <div class="user-dropdown">
+                    <a href="#" class="user-trigger">
+                        👤 Bienvenido
+                    </a>
+                    <!-- La caja blanca que estará oculta -->
+                    <div class="dropdown-content">
+                        <a href="#">Registrarse</a>
+                        <a href="#">Iniciar sesión</a>
+                    </div>
+                </div>
+                <!-- 2. El botón del Carrito de Compras -->
+                <a href="Carrito.html" class="cart-link">
+                    <span class="cart-badge">0</span>
+                    🛒 Carrito
+                </a>
+
+            </div>
+        </nav>
+   </div>
+   <!-- Contenedor principal del formulario de contacto con fondo destacado -->
+   <div class="tarjeta-blanca-formulario" id="contenedor-tarjeta">
+       <h2 class="titulo-contacto">CONTACTO</h2>
+       <p class="subtitulo-contacto">Envíanos tus dudas o comentarios.</p>
+       <hr class="linea-contacto">
+       <!-- Formulario para recibir mensajes de los clientes -->
+       <form id="formulario-contacto" action="#" method="POST">
+           <!-- NOMBRE Y APELLIDO -->
+           <div class="fila-doble">
+               <div class="mitad">
+                   <label>Nombre:</label><br>
+                   <input type="text" id="nombre" name="nombre" class="input-estilo">
+                   <span id="error-nombre" class="texto-error"></span>
+               </div>
+
+               <div class="mitad">
+                   <label>Apellido:</label><br>
+                   <input type="text" id="apellido" name="apellido" class="input-estilo">
+                   <span id="error-apellido" class="texto-error"></span>
+               </div>
+           </div>
+
+           <!-- EMAIL -->
+           <div class="campo-simple">
+               <label>Email:</label><br>
+               <input type="email" id="email" name="email" class="input-estilo">
+               <span id="error-email" class="texto-error"></span>
+           </div>
+
+           <!-- RUT -->
+           <div class="campo-simple">
+               <label>Rut:</label><br>
+               <input type="text" id="rut" name="rut" class="input-estilo" placeholder="Ej: 12345678-9">
+               <span id="error-rut" class="texto-error"></span>
+           </div>
+
+           <!-- CELULAR -->
+           <div class="campo-simple">
+               <label>Celular:</label><br>
+               <input type="tel" id="celular" name="celular" class="input-estilo">
+               <span id="error-celular" class="texto-error"></span>
+           </div>
+
+           <!-- DESCRIPCIÓN -->
+           <div class="campo-simple">
+               <label>Descripción:</label><br>
+               <textarea id="descripcion" name="descripcion" class="input-estilo" rows="5" placeholder="Escribe tus dudas o comentarios aquí..."></textarea>
+               <span id="error-descripcion" class="texto-error"></span>
+           </div>
+           <button type="submit" style="background: #5c6138; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer;">Enviar</button>
+       </form>
+   </div>
+   <script src="js/contacto.js"></script>
+</body>
+</html>
